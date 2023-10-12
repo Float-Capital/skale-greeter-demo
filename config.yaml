@@ -1,0 +1,35 @@
+name: Greeter
+description: Greeter indexer
+networks:
+  - id: 1351057110 # Skale Chaos testnet
+    start_block: 1936950
+    rpc_config:
+      url: https://staging-v3.skalenodes.com/v1/staging-fast-active-bellatrix
+    contracts:
+      - name: ChaosGreeter
+        abi_file_path: abis/greeter-abi.json
+        address: "0x5ddAA080C1B055b39609815d4aE522615b2f0Fd3"
+        handler: src/EventHandlers.ts
+        events:
+          - event: "NewGreeting"
+            requiredEntities:
+              - name: "Greeting"
+          - event: "ClearGreeting"
+            requiredEntities:
+              - name: "Greeting"
+  # - id: 1350216234 # Titan community chain
+  #   start_block: 0
+  #   rpc_config:
+  #     url: https://mainnet.skalenodes.com/v1/parallel-stormy-spica
+  #   contracts:
+  #     - name: TitanGreeter
+  #       abi_file_path: abis/greeter-abi.json
+  #       address: "Ox123"
+  #       handler: ./src/EventHandlers.ts
+  #       events:
+  #         - event: "NewGreeting"
+  #           requiredEntities:
+  #             - name: "Greeting"
+  #         - event: "ClearGreeting"
+  #           requiredEntities:
+  #             - name: "Greeting"
