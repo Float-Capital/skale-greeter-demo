@@ -3,10 +3,10 @@ import {
   ChaosGreeterContract_NewGreeting_handler,
   ChaosGreeterContract_ClearGreeting_loader,
   ChaosGreeterContract_ClearGreeting_handler,
-  TitanGreeterContract_NewGreeting_loader,
-  TitanGreeterContract_NewGreeting_handler,
-  TitanGreeterContract_ClearGreeting_loader,
-  TitanGreeterContract_ClearGreeting_handler,
+  // TitanGreeterContract_NewGreeting_loader,
+  // TitanGreeterContract_NewGreeting_handler,
+  // TitanGreeterContract_ClearGreeting_loader,
+  // TitanGreeterContract_ClearGreeting_handler,
 } from "../generated/src/Handlers.gen";
 
 import { greetingEntity } from "../generated/src/Types.gen";
